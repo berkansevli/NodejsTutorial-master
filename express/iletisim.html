@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Anasayfaya Git</a>
+
+    <div>
+        <label>Ad</label>
+        <input type="text" name="" id="name">
+    </div>
+    <div>
+        <label>Soyad</label>
+        <input type="text" name="" id="surname">
+    </div>
+    <div>
+        <label for="">Mesaj</label>
+        <input type="text" id="msg">
+    </div>
+    <div>
+        <button>Gönder</button>
+    </div>
+</body>
+</html>
+<script>
+$(document).on("click","button",function(){
+    var contact = new Object();
+    contact.name = $("#name").val();
+    contact.surname = $("#surname").val();
+    contact.message = $("#msg").val();
+
+
+    $.ajax({
+        url:"http://localhost:3001/iletisim",
+        data:contact,
+        type:"POST",
+        success:function(data){
+            console.log(data);
+        },
+        error:function(msg){
+            console.log(msg.responseText);
+        }
+    })
+
+})
+</script>

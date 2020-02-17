@@ -1,0 +1,1 @@
+mongodb+srv://dbadmin:<password>@cluster0-jftuw.mongodb.net/test?retryWrites=true&w=majority

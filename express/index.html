@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <a href="/iletisim">İletişime Git</a>
+    <h1>Anasayfa</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem assumenda enim molestias expedita amet veniam soluta odio id praesentium, pariatur quisquam, architecto, ullam animi cumque placeat eos fuga perspiciatis! Accusantium!</p>
+</body>
+</html>
+<script>
+    $.getJSON("http://localhost:3001/api/kategoriler",function(data){
+        console.log(data);
+    })
+</script>
